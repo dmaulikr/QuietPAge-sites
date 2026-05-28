@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuietPage — A place that shows you what you've become.</title>
+<meta name="description" content="A small, private journal for honest writing. One quiet question a day. Some questions return, so you can read your past self and watch yourself change.">
+<meta property="og:title" content="QuietPage">
+<meta property="og:description" content="A place that shows you what you've become.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --paper: #F6F1E8;
+    --ink: #2C2823;
+    --muted: #8A7F70;
+    --accent: #6B5B4A;
+    --hairline: #E0D7C5;
+    --card: #FBF7EE;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1B1714;
+      --ink: #EDE3D1;
+      --muted: #8C8276;
+      --accent: #C9B79A;
+      --hairline: #2A241D;
+      --card: #221D17;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Hoefler Text', 'Garamond', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .nav {
+    border-bottom: 0.5px solid var(--hairline);
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .nav .brand { font-style: italic; font-size: 18px; }
+  .nav .links a {
+    margin-left: 18px; font-size: 13px;
+    color: var(--muted); text-decoration: none;
+  }
+  .nav .links a:hover { color: var(--ink); }
+  .hero {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 96px 24px 64px;
+    text-align: center;
+  }
+  .label {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 16px 0 28px;
+    color: var(--ink);
+  }
+  .tagline {
+    font-size: 22px;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.4;
+    margin: 0 auto 40px;
+    max-width: 560px;
+  }
+  .download {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    font-style: italic;
+    border-radius: 999px;
+    font-size: 17px;
+    transition: opacity 0.2s;
+  }
+  .download:hover { opacity: 0.9; }
+  .small { font-size: 12px; color: var(--muted); margin-top: 14px; font-style: italic; }
+  .section {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    border-top: 0.5px solid var(--hairline);
+  }
+  .section h2 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 0 0 20px;
+  }
+  .section p { color: var(--ink); margin: 0 0 16px; }
+  .section .muted { color: var(--muted); font-style: italic; }
+  .pillars {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+  @media (min-width: 720px) {
+    .pillars { grid-template-columns: repeat(3, 1fr); }
+  }
+  .pillar h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    margin: 0 0 8px;
+  }
+  .pillar p {
+    margin: 0;
+    color: var(--ink);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .quote {
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--ink);
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 32px 0;
+  }
+  footer {
+    border-top: 0.5px solid var(--hairline);
+    padding: 32px 24px 56px;
+    max-width: 640px;
+    margin: 40px auto 0;
+    color: var(--muted);
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+  }
+  footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; margin: 0 8px; }
+  footer a:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="brand">QuietPage</span>
+  <span class="links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="support.html">Support</a>
+  </span>
+</nav>
+
+<header class="hero">
+  <div class="label">A small place for honest writing</div>
+  <h1>A place that shows you<br>what you've become.</h1>
+  <p class="tagline">One quiet question, once a day. Some questions return — so you can read what you wrote a season ago and see, plainly, how you've changed.</p>
+  <a class="download" href="#">Download on the App Store</a>
+  <p class="small">Requires iOS 26 or later. iPhone &amp; iPad.</p>
+</header>
+
+<section class="section">
+  <div class="label">Threads</div>
+  <h2>Some questions return.</h2>
+  <p>Twelve of QuietPage's questions are <em>Mirror</em> questions — prompts that come back across weeks and months. When you finish writing one, the app shows you what you said the last few times you answered it. Side by side. Silent.</p>
+  <p>It is the small, private moment that no other journal gives you: the chance to read your past self in the act of becoming someone slightly different.</p>
+</section>
+
+<section class="section">
+  <h2>Quiet by design.</h2>
+  <div class="pillars">
+    <div class="pillar">
+      <h3>No streaks</h3>
+      <p>Returns are counted, never broken. A page is enough on its own.</p>
+    </div>
+    <div class="pillar">
+      <h3>No cloud</h3>
+      <p>Every page lives only on your device. There is no account.</p>
+    </div>
+    <div class="pillar">
+      <h3>No noise</h3>
+      <p>One question a day. One quiet nudge, if you choose. No badges.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="label">A page from before</div>
+  <h2>Read your earlier self.</h2>
+  <p>Now and then, beneath today's question, QuietPage surfaces a single sentence from a page you wrote weeks or months ago — quietly, without ceremony. A reason to return that isn't a reminder.</p>
+</section>
+
+<section class="section">
+  <p class="quote">"A place that shows you what you've become."</p>
+</section>
+
+<footer>
+  © <span id="year">2026</span> QuietPage ·
+  <a href="privacy.html">Privacy</a> ·
+  <a href="terms.html">Terms</a> ·
+  <a href="support.html">Support</a>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>

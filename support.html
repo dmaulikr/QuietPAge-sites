@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — QuietPage</title>
+<meta name="description" content="Help, FAQs, and contact for QuietPage.">
+<style>
+  :root {
+    --paper: #F6F1E8; --ink: #2C2823; --muted: #8A7F70;
+    --accent: #6B5B4A; --hairline: #E0D7C5; --card: #FBF7EE;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1B1714; --ink: #EDE3D1; --muted: #8C8276;
+      --accent: #C9B79A; --hairline: #2A241D; --card: #221D17;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Hoefler Text', 'Garamond', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    background: var(--paper); color: var(--ink);
+    line-height: 1.65; font-size: 17px; -webkit-font-smoothing: antialiased;
+  }
+  .nav {
+    border-bottom: 0.5px solid var(--hairline);
+    padding: 18px 24px; display: flex;
+    justify-content: space-between; align-items: center;
+    max-width: 640px; margin: 0 auto;
+  }
+  .nav .brand { font-style: italic; font-size: 18px; }
+  .nav .brand a { color: var(--ink); text-decoration: none; }
+  .nav .links a {
+    margin-left: 18px; font-size: 13px;
+    color: var(--muted); text-decoration: none;
+  }
+  .nav .links a:hover { color: var(--ink); }
+  .page { max-width: 640px; margin: 0 auto; padding: 64px 24px 96px; }
+  .label {
+    font-size: 10px; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--muted);
+  }
+  h1 {
+    font-style: italic; font-weight: 400; font-size: 38px;
+    line-height: 1.2; margin: 8px 0 16px; color: var(--ink);
+  }
+  h2 {
+    font-style: italic; font-weight: 400; font-size: 22px;
+    line-height: 1.3; margin: 44px 0 8px; color: var(--ink);
+  }
+  p { color: var(--ink); margin: 0 0 16px; }
+  .muted { color: var(--muted); font-style: italic; }
+  hr { border: none; border-top: 0.5px solid var(--hairline); margin: 40px 0; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .faq h2 { margin-top: 36px; }
+  .contact-card {
+    background: var(--card);
+    border: 0.5px solid var(--hairline);
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .contact-card .label { display: block; margin-bottom: 8px; }
+  .contact-card a {
+    font-size: 22px;
+    font-style: italic;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  footer {
+    border-top: 0.5px solid var(--hairline);
+    padding: 28px 24px 48px; max-width: 640px; margin: 40px auto 0;
+    color: var(--muted); font-size: 13px; font-style: italic; text-align: center;
+  }
+  footer a { color: var(--muted); margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="brand"><a href="index.html">QuietPage</a></span>
+  <span class="links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="support.html">Support</a>
+  </span>
+</nav>
+
+<main class="page">
+  <div class="label">Support</div>
+  <h1>How can we help?</h1>
+  <p class="muted">QuietPage is a small app, made with care. We answer every email.</p>
+
+  <div class="contact-card">
+    <span class="label">Write to us</span>
+    <a href="mailto:hello@quietpage.app">hello@quietpage.app</a>
+  </div>
+
+  <div class="faq">
+    <h2>Where is my writing stored?</h2>
+    <p>Only on your device. There is no server, no account, no cloud. If you delete the app, the pages on that device go with it.</p>
+
+    <h2>How do I back up my pages?</h2>
+    <p>Open Settings inside QuietPage and tap <em>Export your pages</em>. The app produces a plain-text file you can save to Files, email to yourself, or send to any other app.</p>
+
+    <h2>Can I sync between my iPhone and iPad?</h2>
+    <p>Not in this version. iCloud sync is intentionally absent in 1.0 to keep the privacy story simple. We're considering an end-to-end encrypted option for a future release.</p>
+
+    <h2>I'm not getting the daily nudge.</h2>
+    <p>Open the iOS Settings app, find QuietPage, and make sure Notifications are allowed. Then return to QuietPage → Settings → Daily nudge and toggle it on.</p>
+
+    <h2>I forgot Face ID and the app is locked.</h2>
+    <p>QuietPage uses your device's Face ID and passcode for unlocking. If neither works, iOS itself controls fallback. We have no way to remotely unlock the app, by design — that's the same reason no one else can either.</p>
+
+    <h2>Can I write my own questions?</h2>
+    <p>Not yet. Custom prompts can't form Mirror threads with the curated set the way written-by-us questions can. We're thinking about it for a later version.</p>
+
+    <h2>How do streaks work?</h2>
+    <p>They don't. We deliberately don't track streaks. QuietPage counts the pages you've written and the days you returned this week — both are measures that only ever grow, never break.</p>
+
+    <h2>I have a feature request.</h2>
+    <p>Please write. We read every message, and the things people quietly ask for shape what we build next.</p>
+  </div>
+
+  <hr>
+  <p class="muted">QuietPage 1.0 · A small place for honest writing.</p>
+</main>
+
+<footer>
+  © <span id="year">2026</span> QuietPage ·
+  <a href="privacy.html">Privacy</a> ·
+  <a href="terms.html">Terms</a> ·
+  <a href="support.html">Support</a>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
